@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class Player {
-    boolean computer;
-    static int player_count;
-    int picked_num;
-    int player_num;
+    private boolean computer;
+    private static int player_count;
+    public int picked_num;
+    public int player_num;
 
     public Player() {
         player_count++;
@@ -28,12 +28,12 @@ public class Player {
 
 
         } else {
-            boolean again = true;
+            boolean user_selected = true;
             Scanner input = new Scanner(System.in);
 
 
 
-            while (repeatable > 0 && again) {
+            while (repeatable > 0 && user_selected) {
                 repeatable--;
                 this.picked_num = Bet.Play();
                 System.out.println(
@@ -42,7 +42,7 @@ public class Player {
                 System.out.println(
                         "Do you want to pick again, Player " + this.player_num + "? [true/false]");
 
-                again = input.nextBoolean();
+                user_selected = input.nextBoolean();
 
 
 
