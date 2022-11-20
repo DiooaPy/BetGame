@@ -15,15 +15,17 @@ public class BetMore_Game {
 
     if (computer.picked_num > player_2.picked_num) {
 
-      winner = winner + Integer.toString(computer.player_num) + " wins with Number " + computer.picked_num;
+      winner = winner + Integer.toString(computer.player_num) + " wins with Number "
+          + computer.picked_num;
 
-      
+
 
     } else if (computer.picked_num < player_2.picked_num) {
 
-      winner = winner + Integer.toString(player_2.player_num) + " wins with Number " + player_2.picked_num;
+      winner = winner + Integer.toString(player_2.player_num) + " wins with Number "
+          + player_2.picked_num;
 
-      
+
     } else {
       winner = "both";
     }
